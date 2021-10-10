@@ -1,8 +1,10 @@
 part of './pages.dart';
 
 abstract class Routes {
-  static const auth = '/';
+  static const AUTH = '/auth';
   static const HOME = '/home';
-  static const LOGIN = '/login';
   static const CADASTRO = '/cadastro';
+  static const NOTICIAS = '/noticias';
+  static const PERFIL = '/perfil';
+  static const DASHBOARD = '/dashboard';
 }
