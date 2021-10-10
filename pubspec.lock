@@ -254,6 +254,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.0"
+  water_drop_nav_bar:
+    dependency: "direct main"
+    description:
+      name: water_drop_nav_bar
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.0"
   xml:
     dependency: transitive
     description:

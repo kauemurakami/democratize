@@ -1,4 +1,5 @@
 import 'package:democratize_app/app/modules/auth/repository.dart';
+
 import 'package:get/get.dart';
 
 class AuthController extends GetxController {

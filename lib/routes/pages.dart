@@ -20,23 +20,11 @@ abstract class AppPages {
       binding: DashboardBinding(),
       participatesInRootNavigator: true,
       preventDuplicates: true,
-      children: [
-        GetPage(
-            preventDuplicates: true,
-            name: Routes.HOME,
-            page: () => HomePage(),
-            binding: HomeBinding()),
-        // GetPage(
-        //     preventDuplicates: true,
-        //     name: Routes.ALL_EXERCISES,
-        //     page: () => ExercisesPage(),
-        //     binding: ExercisesBinding()),
-        // GetPage(
-        //     preventDuplicates: true,
-        //     name: Routes.SETTINGS,
-        //     page: () => SettingsPage(),
-        //     binding: SettingsBinding()),
-      ],
     ),
+    GetPage(
+        preventDuplicates: true,
+        name: Routes.HOME,
+        page: () => HomePage(),
+        binding: HomeBinding()),
   ];
 }

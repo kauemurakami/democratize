@@ -71,11 +71,25 @@ class AuthPage extends GetView<AuthController> {
             width: SizeConfig.wp(40.0),
             height: SizeConfig.hp(40.0),
             bottom: -SizeConfig.hp(10.0),
-            left: 4.0,
-            child: MaterialButton(
-              onPressed: () => '',
-              child: const Text('teste'),
-            ))
+            left: 50.0,
+            child: Column(children: const [
+              Text(
+                'Acompanhamento, opiniões e participação continua da populações na toma de decisões das politicas públicas locais.',
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16.0,
+                    color: roxin,
+                    fontFamily: 'Cairo'),
+              ),
+            ])),
+        Positioned(
+          bottom: 0,
+          child: MaterialButton(
+            color: Colors.black,
+            child: Text('dash'),
+            onPressed: () => Get.offAllNamed(Routes.DASHBOARD),
+          ),
+        )
       ],
     ));
   }

@@ -1,5 +1,7 @@
 import 'package:democratize_app/app/data/providers/api.dart';
+import 'package:democratize_app/app/modules/auth/binding.dart';
 import 'package:democratize_app/app/modules/auth/controller.dart';
+import 'package:democratize_app/app/modules/auth/page.dart';
 import 'package:democratize_app/app/modules/auth/repository.dart';
 import 'package:democratize_app/core/theme/app/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -22,25 +24,14 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
 
-    return GetMaterialApp.router(
+    return GetMaterialApp(
       enableLog: true,
       debugShowCheckedModeBanner: false,
-      smartManagement: SmartManagement.full,
+      home: AuthPage(),
       theme: CustomTheme.getTheme(context),
-      initialBinding: BindingsBuilder(
-        () {
-          Get.put(AuthController(AuthRepository(MyApi())));
-        },
-      ),
+      initialBinding: AuthBinding(),
       getPages: AppPages.pages,
-      routeInformationParser: GetInformationParser(
-        initialRoute: Routes.AUTH,
-      ),
-      routerDelegate: GetDelegate(
-        backButtonPopMode: PopMode.History,
-        preventDuplicateHandlingMode:
-            PreventDuplicateHandlingMode.ReorderRoutes,
-      ),
+      initialRoute: Routes.AUTH,
     );
   }
 }
